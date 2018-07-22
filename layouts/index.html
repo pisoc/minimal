@@ -4,11 +4,11 @@
 
     <div class="intro">
 
-        {{ with .Site.Params.profilePic }} <img class="profile" src="{{ . }}"> {{ end }}
-
         <h1>{{ .Site.Title }}</h1>
 
-        <h2>{{ markdownify .Site.Params.Description }}</h2>
+        <h2 id="subtitle"></h2>  
+        <script src="/js/random.js"></script> 
+        {{ $recent := first 1 (.Data.Pages) }} {{ range $recent }} {{ partial "list-item" . }} {{ end }}
 
     </div>
 
