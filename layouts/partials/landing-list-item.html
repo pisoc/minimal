@@ -1,0 +1,23 @@
+<div class="item">
+    {{ if eq "news" .Type }}
+      <h2>Latest news</h2>
+    {{ end }}
+
+    {{ if eq "projects" .Type }}
+      <h2>Latest project</h2>
+    {{ end }}
+
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+
+    {{ if eq "news" .Type }}
+      <h5> Posted: {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}</h5>
+    {{ end }}
+
+    {{ if eq "projects" .Type }}
+      <h5>{{ .Params.Description }}</h5>
+      <h5>Posted: {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }} | Author: {{ .Params.author }}</h5>
+    {{ end }}
+
+    {{ range .Params.tags }} <kbd class="item-tag">{{ . }}</kbd> {{ end }}
+
+</div>

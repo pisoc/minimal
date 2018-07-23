@@ -2,15 +2,21 @@
 
 <main>
 
-    <div class="intro">
+  <div class="intro">
 
-        <h1>{{ .Site.Title }}</h1>
+    <h1>{{ .Site.Title }}</h1>
 
-        <h2 id="subtitle"></h2>  
-        <script src="/js/random.js"></script> 
-        {{ $recent := first 1 (.Data.Pages) }} {{ range $recent }} {{ partial "list-item" . }} {{ end }}
+    <h2 id="subtitle"></h2>  
+    <script src="/js/random.js"></script>
 
-    </div>
+    {{ range first 1 (where .Pages "Section" "news") }} 
+      {{ partial "landing-list-item" . }}
+    {{ end }}
+
+    {{ range first 1 (where .Pages "Section" "projects") }}
+      {{ partial "landing-list-item" . }}
+    {{ end }}
+  </div>
 
 </main>
 
