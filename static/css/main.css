@@ -78,6 +78,16 @@ a:hover {
 
 /*navigation bar icons*/
 
+ul.nav.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+
+ul.nav.navbar-nav > li {
+    float: none;
+    display: inline-block;
+}
+
 .navbar-icon {
     font-size: 125%;
     display: inline-block !important;
