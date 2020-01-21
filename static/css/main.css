@@ -10,10 +10,10 @@ body {
 }
 
 main {
-    margin: auto;
+    /* margin: auto; */
     padding: 25px;
     flex: 1 0 auto;
-    max-width: 750px;
+    /* max-width: 750px; */
 }
 
 /*footer*/
@@ -25,15 +25,20 @@ main {
 /*home page*/
 
 .intro {
-    margin: 7vh 0;
+    /* margin: 7vh 0; */
 }
 
-.intro > h1 {
+.tall-row {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.site-title {
     color: #212121;
     font-size: 12vh;
 }
 
-.intro > h2 {
+.site-subtitle {
     color: #757575;
     font-size: 3vmin;
 }

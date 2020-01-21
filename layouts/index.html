@@ -4,24 +4,78 @@
 
   <div class="intro">
 
-    <h1>{{ .Site.Title }}</h1>
+    <div class="container-fluid"></div>
 
-    <h2 id="subtitle"></h2>  
-    <script src="/js/random.js"></script>
+    <div class="row tall-row">
 
-    {{ range first 1 (where .Pages "Section" "news") }} 
-      {{ partial "landing-list-item" . }}
-    {{ end }}
+      <div class="col-md-12">
 
-    {{ range first 1 (where .Pages "Section" "projects") }}
-      {{ partial "landing-list-item" . }}
-    {{ end }}
+        <h1 class="site-title">{{ .Site.Title }}</h1>
 
-    <div class="item">
+        <h2 class="site-subtitle" id="subtitle"></h2>
+        <script src="/js/random.js"></script>
+
+      </div>
+
+    </div>
+
+    <div class="row tall-row">
+
+      <div class="col-md-4">
+        <div class="item">
+          <h2>Latest news</h2>
+          {{ range first 2 (where .Pages "Section" "news") }} {{ partial "landing-list-item" . }} {{ end }}
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="item">
+          <h2>Upcoming events</h2>
+          {{ range first 2 (where .Pages "Section" "events") }} {{ partial "landing-list-item" . }} {{ end }}
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="item">
+          <h2>Latest projects</h2>
+          {{ range first 2 (where .Pages "Section" "projects") }} {{ partial "landing-list-item" . }} {{ end }}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row tall-row">
+
+      <div class="col-md-6">
+        <div class="item">
+          <h2>Upcoming Sessions</h2>
+          <p>SOME TEXT HERE</p>
+          <p>SOME TEXT HERE</p>
+          <p>SOME TEXT HERE</p>
+          <p>SOME TEXT HERE</p>
+          <p>SOME TEXT HERE</p>
+          <p>SOME TEXT HERE</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="item">
+          <h2>Latest Minutes</h2>
+          {{ range first 2 (where .Pages "Section" "minutes") }} {{ partial "landing-list-item" . }} {{ end }}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- <div class="item">
       <h2>Weekly meetings</h2>
       <p>We hold our meetings every Monday between 18:30 and 20:00 in Horton D1.01</p>
-      <p><a href="/contact">Click here to find out more!</a></p>
-    </div>
+      <p>
+        <a href="/contact">Click here to find out more!</a>
+      </p>
+    </div> -->
 
   </div>
 
