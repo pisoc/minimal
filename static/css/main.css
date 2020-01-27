@@ -10,10 +10,8 @@ body {
 }
 
 main {
-    /* margin: auto; */
     padding: 25px;
     flex: 1 0 auto;
-    /* max-width: 750px; */
 }
 
 /*footer*/
@@ -24,13 +22,9 @@ main {
 
 /*home page*/
 
-.intro {
-    /* margin: 7vh 0; */
-}
-
 .tall-row {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
 .site-title {
@@ -41,10 +35,6 @@ main {
 .site-subtitle {
     color: #757575;
     font-size: 3vmin;
-}
-
-.intro > .item {
-    padding: 20px 20px;
 }
 
 /*apply accent colour to links*/
@@ -72,10 +62,6 @@ a:hover {
 }
 
 /*list item for posts and projects*/
-
-.item {
-    padding: 10px 0;
-}
 
 .item-tag {
     background-color: var(--accent);
