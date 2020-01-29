@@ -1,8 +1,10 @@
+{{/* Does tag and "type" pages */}}
+
 {{ partial "header" . }}
 
 <main>
 
-    <h2>{{ .Title }}</h2>
+    <h1>{{ .Title }}</h1>
 
     {{ range (.Paginator 6).Pages }} {{ partial "list-item" . }} {{ end }}
 
