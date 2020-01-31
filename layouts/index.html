@@ -21,7 +21,13 @@
 
       <div class="col-md-4">
         <h2>Latest News</h2>
-        {{ range first 2 (where .Pages "Section" "news") }} {{ partial "landing-list-item" . }} {{ end }}
+        <!-- Single pinned post at the top -->
+        {{ range first 1 (where (where .Pages "Section" "news") ".Params.pinned" "==" true) }} {{ partial "landing-list-item" . }}
+        {{ end }}
+
+        <!-- Two regular posts following pinned -->
+        {{ range first 2 (where (where .Pages "Section" "news") ".Params.pinned" "!=" true) }} {{ partial "landing-list-item" . }}
+        {{ end }}
       </div>
 
       <div class="col-md-4">
