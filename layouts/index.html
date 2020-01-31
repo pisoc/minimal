@@ -19,7 +19,11 @@
 
     <div class="row tall-row">
       <div class="col-md-12">
-        <h2><a href="/meetings">Click here to join!</a></h2>
+        <h2>
+          <a href="{{ range first 1 (where .Site.Menus.main ".Name" "==" "join")  }} {{ .URL }} {{ end }}">
+            Click here to join!
+          </a>
+        </h2>
       </div>
     </div>
 
